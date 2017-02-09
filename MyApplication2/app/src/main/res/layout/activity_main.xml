@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.leekt.myapplication.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="#ffefd5"
+        android:id="@+id/first"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="자기소개"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="0.5"
+        android:background="#ca3045"
+        android:orientation="horizontal"
+        android:layout_below="@+id/first"
+        android:id="@+id/second">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="3"
+            android:id="@+id/second">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ab"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_weight="2"
+            android:background="#525b51"
+            android:orientation="vertical">
+
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="200dp"
+                 android:padding="25dp"
+                 android:layout_weight="1">
+                 <TextView
+                     android:id="@+id/name"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:ellipsize="end"
+                     android:maxLines="1"
+                     android:text="이름"/>
+
+                 <TextView
+                     android:id="@+id/age"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/name"
+                     android:text="나이"
+                     />
+
+                 <TextView
+                     android:id="@+id/school"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/age"
+                     android:text="학교"/>
+
+                 <TextView
+                     android:id="@+id/part"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/school"
+                     android:text="지원분야"/>
+
+
+
+
+
+                 <EditText
+                     android:id="@+id/edName"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignBaseline="@+id/name"
+                     android:layout_marginLeft="15dp"
+                     android:layout_toEndOf="@+id/name"
+                     android:hint="이름 입력"
+                     android:textSize="12sp"/>
+                 <EditText
+                     android:id="@+id/edAge"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignBaseline="@+id/age"
+                     android:layout_marginLeft="15dp"
+                     android:layout_toEndOf="@+id/age"
+                     android:hint="나이 입력"
+                     android:textSize="12sp"/>
+
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignBaseline="@+id/school"
+                     android:layout_marginLeft="15dp"
+                     android:layout_toEndOf="@+id/school"
+                     android:hint="학교 입력"
+                     android:textSize="12sp"/>
+                 <EditText
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_alignBaseline="@+id/part"
+                     android:layout_marginLeft="15dp"
+                     android:layout_toEndOf="@+id/part"
+                     android:hint="지원분야 입력"
+                     android:textSize="12sp"/>
+
+
+             </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/second"
+        >
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/second"
+       >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/ab"
+            android:tint="#5effffff"
+            android:id="@+id/imageView2" />
+        <Button
+            android:id="@+id/btn01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:text="입력"/>
+
+
+
+    </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>
